@@ -62,7 +62,7 @@ Tip!
 'org.springframework.boot:spring-boot-starter-validation' 라이브러리를 활용해주세요!
 
 
-## Lv 3. N+1 문제 `필수`
+## Lv 3. N+1 문제
 
 - `TodoController`와 `TodoService`를 통해 `Todo` 관련 데이터를 처리합니다.
 - 여기서 N+1 문제가 발생할 수 있는 시나리오는 `getTodos` 메서드에서 모든 Todo를 조회할 때, 각 Todo와 연관된 데이터를 개별적으로 가져오는 경우입니다.
@@ -71,10 +71,29 @@ Tip!
 
 
 
+## Lv 4. 테스트코드 연습
+
+### 1. 테스트 코드 연습 - 1 (예상대로 성공하는지에 대한 케이스입니다.)
+
+테스트 패키지 org.example.expert.config; 의 PasswordEncoderTest 클래스에 있는 matches_메서드가_정상적으로_동작한다() 테스트가 의도대로 성공할 수 있게 수정해 주세요.
 
 
+### 2. 테스트 코드 연습 - 2 (예상대로 예외처리 하는지에 대한 케이스입니다.)
 
+- 1번 케이스
+    
+    테스트 패키지 `org.example.expert.domain.manager.service;` 의 `ManagerServiceTest` 의 클래스에 있는 `manager_목록_조회_시_Todo가_없다면_NPE_에러를_던진다()` 테스트가 성공하고 컨텍스트와 일치하도록 **테스트 코드**와 **테스트 코드 메서드명**을 수정해 주세요.
+ 
+    Hint! 
+    던지는 에러가 `NullPointerException`이 아니므로 메서드명 또한 수정되어야 해요!
 
+- 2번 케이스
+  
+    테스트 패키지 `org.example.expert.domain.comment.service;` 의 `CommentServiceTest` 의 클래스에 있는 `comment_등록_중_할일을_찾지_못해_에러가_발생한다()` 테스트가 성공할 수 있도록 **테스트 코드**를 수정해 주세요.
+    
+- 3번 케이스
+    
+    테스트 패키지 `org.example.expert.domain.manager.service`의 `ManagerServiceTest` 클래스에 있는 `todo의_user가_null인_경우_예외가_발생한다()` 테스트가 성공할 수 있도록 **서비스 로직**을 수정해 주세요.
 
 
 
